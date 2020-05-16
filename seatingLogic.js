@@ -1,24 +1,34 @@
 //HAWT Dawna
 //10 booths which seat 6
 //10 tables in the Resteraunt each table seats 4.
-const booths = 10;
-const boothSeatsTotal = booths * 6;
-const tables = 10;
-const tableSeatsTotal = tables * 4;
-//TOTAL SEATS RESERVED
-const tsr = 0;
-//TOTAL SEATS AVAILABLE = tsa
-let tsa = seatsAvailableBooths + seatsAvailableTables;
+
+// variables [MaxTables and TOTAL Tables RESERVED]
+const maxTables = 10;
+let ttr = [];
+//arrays for total tables available should not
+
+//the length of the tsr should not be greater than maxTables and IF then move party name to waiting list.
+
+//there is no max to the waiting list.
 
 // if we combine a table to seat 8 we now have 9 tables but same amount(40) people allowed + 60 ppl booths
 //allowing 100 guests
 
 //if all seats are taken then inject "partyName" and "partySize"
+// If party size is greater than 5, subtract 2 tables.
 
-function reserveSeating(partySize) {
+function reserveSeating() {
+    //if reserving *Check if tables are available.
+    //if available *reserve table for that time.
+    //if unavailable then push last name to waiting list cue(wlc).
+    //inside of wlc present user with *Estimated wait time and postion in line.
   //if tables reserved is less than or equal to whats available then we will allow the reservation
   if (tsr <= tsa - 4) {
+    //add 1 to seats reserved
   }
+}
+function reservationComplete() {
+  //subtract 1 from ttr(total tables reserved)
 }
 /* 
 The user form should
