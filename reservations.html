@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HotRestaurantReservtions</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <content class="row d-flex justify-content-center">
+            <content class="col-10 col-md-10 col-sm-12 col-xs-12">
+                <form action="contact.php" method="POST" enctype="multipart/form-data">
+                    <div class="card border-dark form-group" style="margin-top: 3rem; margin-bottom: 3rem;">
+                        <element class="card-body controls">
+                            <h1>Contact Me Today</h1>
+                            <hr>
+                            <element class="row form-group">
+                                <label for="contactInputName">
+                                    <h4 style="margin-left: 20px">Your Name:</h4>
+                                </label>
+                                <element class="card border-dark ml-3 mb-2" style="width: 95%;">
+                                    <input name="name" type="text" class="form-control" id="contactInputName"
+                                        placeholder="John Doe Smith">
+                                </element>
+                            </element>
+                            <element class="row form-group">
+                                <label for="contactEmailAddress">
+                                    <h4 style="margin-left: 20px">Email Address:</h4>
+                                </label>
+                                <element class="card border-dark ml-3 mb-2" style="width: 95%;">
+                                    <input name="name" type="text" class="form-control" id="contactEmailAddress"
+                                        placeholder="JohnDoeSmith@email.com">
+                                </element>
+                            </element>
+                            <element class="row form-group">
+                                <label for="contactInputMessage">
+                                    <h4 style="margin-left: 20px">Your Message:</h4>
+                                </label>
+                                <element class="card border-dark ml-3 mb-3" style="width: 95%; height: 15rem;">
+                                    <textarea name="message" class="form-control" id="contactInputMessage"
+                                        placeholder="Please leave us a message." rows="10"></textarea>
+                                </element>
+                            </element>
+                            <element class="row">
+                                <button type="submit" class="btn btn-dark btn-lg ml-3">Submit</button>
+                            </element>
+                        </element>
+                    </div>
+                </form>
+
+            </content>
+        </content>
+    </div>
+</body>
+
+</html>
