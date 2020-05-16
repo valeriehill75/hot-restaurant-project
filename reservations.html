@@ -16,24 +16,43 @@
                 <form action="contact.php" method="POST" enctype="multipart/form-data">
                     <div class="card border-dark form-group" style="margin-top: 3rem; margin-bottom: 3rem;">
                         <element class="card-body controls">
-                            <h1>Contact Me Today</h1>
+                            <h1>Reserve Your Table:</h1>
                             <hr>
                             <element class="row form-group">
                                 <label for="contactInputName">
-                                    <h4 style="margin-left: 20px">Your Name:</h4>
+                                    <h4 style="margin-left: 20px">Party Name:</h4>
                                 </label>
                                 <element class="card border-dark ml-3 mb-2" style="width: 95%;">
                                     <input name="name" type="text" class="form-control" id="contactInputName"
-                                        placeholder="John Doe Smith">
+                                        placeholder="Smith">
+                                </element>
+                            </element>
+
+                            <element class="row form-group">
+                                <label for="contactEmailAddress">
+                                    <h4 style="margin-left: 20px">Contact Phone Number:</h4>
+                                </label>
+                                <element class="card border-dark ml-3 mb-2" style="width: 95%;">
+                                    <input name="name" type="text" class="form-control" id="contactEmailAddress"
+                                        placeholder="(913) 555-1212">
                                 </element>
                             </element>
                             <element class="row form-group">
                                 <label for="contactEmailAddress">
-                                    <h4 style="margin-left: 20px">Email Address:</h4>
+                                    <h4 style="margin-left: 20px">Contact Email:</h4>
                                 </label>
                                 <element class="card border-dark ml-3 mb-2" style="width: 95%;">
                                     <input name="name" type="text" class="form-control" id="contactEmailAddress"
-                                        placeholder="JohnDoeSmith@email.com">
+                                        placeholder="First.Last@email.com">
+                                </element>
+                            </element>
+                            <element class="row form-group">
+                                <label for="contactEmailAddress">
+                                    <h4 style="margin-left: 20px">Party Size:</h4>
+                                </label>
+                                <element class="card border-dark ml-3 mb-2" style="width: 95%;">
+                                    <input name="name" type="text" class="form-control" id="contactEmailAddress"
+                                        placeholder="5">
                                 </element>
                             </element>
                             <element class="row form-group">
@@ -42,7 +61,8 @@
                                 </label>
                                 <element class="card border-dark ml-3 mb-3" style="width: 95%; height: 15rem;">
                                     <textarea name="message" class="form-control" id="contactInputMessage"
-                                        placeholder="Please leave us a message." rows="10"></textarea>
+                                        placeholder="Any special requests for out team?  I.E. It is Chris's birthday and he would like everyone to sing to him"
+                                        rows="10"></textarea>
                                 </element>
                             </element>
                             <element class="row">
