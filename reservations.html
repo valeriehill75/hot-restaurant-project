@@ -39,51 +39,53 @@
                                 <h1>Reserve Your Table:</h1>
                                 <hr />
                                 <element class="row form-group">
-                                    <label for="contactInputName">
+                                    <label for="contact name">
                                         <h4 style="margin-left: 20px;">Party Name:</h4>
                                     </label>
                                     <element class="card border-dark ml-3 mb-2" style="width: 95%;">
-                                        <input name="name" type="text" class="form-control" id="contactInputName"
+                                        <input name="name" type="text" class="form-control" id="contactName"
                                             placeholder="Smith" />
                                     </element>
                                 </element>
 
                                 <element class="row form-group">
-                                    <label for="contactEmailAddress">
+                                    <label for="contact phone number">
                                         <h4 style="margin-left: 20px;">Contact Phone Number:</h4>
                                     </label>
                                     <element class="card border-dark ml-3 mb-2" style="width: 95%;">
-                                        <input name="name" type="text" class="form-control" id="contactEmailAddress"
+                                        <input name="name" type="text" class="form-control" id="contactPhone"
                                             placeholder="(913) 555-1212" />
                                     </element>
                                 </element>
                                 <element class="row form-group">
-                                    <label for="contactEmailAddress">
+                                    <label for="contact Email">
                                         <h4 style="margin-left: 20px;">Contact Email:</h4>
                                     </label>
                                     <element class="card border-dark ml-3 mb-2" style="width: 95%;">
-                                        <input name="name" type="text" class="form-control" id="contactEmailAddress"
+                                        <input name="name" type="text" class="form-control" id="contactEmail"
                                             placeholder="First.Last@email.com" />
                                     </element>
                                 </element>
                                 <element class="row form-group">
-                                    <label for="contactEmailAddress">
+                                    <label for="party size">
                                         <h4 style="margin-left: 20px;">Party Size:</h4>
                                     </label>
                                     <element class="card border-dark ml-3 mb-2" style="width: 95%;">
-                                        <input name="name" type="text" class="form-control" id="contactEmailAddress"
+                                        <input name="name" type="text" class="form-control" id="contactPartySize"
                                             placeholder="5" />
                                     </element>
                                 </element>
                                 <element class="row form-group">
-                                    <label for="contactInputMessage">
+                                    <label for="contact special message">
                                         <h4 style="margin-left: 20px;">Your Message:</h4>
                                     </label>
+
                                     <element class="card border-dark ml-3 mb-3" style="width: 95%; height: 15rem;">
-                                        <textarea name="message" class="form-control" id="contactInputMessage"
+                                        <textarea name="message" class="form-control" id="contactMessage"
                                             placeholder="Any special requests for out team?  I.E. It is Chris's birthday and he would like everyone to sing to him"
                                             rows="10"></textarea>
                                     </element>
+
                                 </element>
                                 <element class="row">
                                     <button type="submit" class="btn btn-dark btn-lg ml-3">
@@ -100,6 +102,24 @@
                 </content>
             </content>
         </div>
+        <script>
+          $("#submit-btn").on("click", function (event) {
+        event.preventDefault();
+        var newReservation = {
+          contactName: $("#contactName").val().trim(),
+          contactPhone: $("#contactPhone").val().trim(),
+          contactEmail: $("#contactEmail").val().trim(),
+          contactPartySize: $("#contactPartySize").val().trim(),
+          contactMessage: $("#contactMessage").val().trim(),
+        };
+
+        // Question: What does this code do??
+        $.post("/api/reservations", newReservation).then(function (data) {
+          console.log("add.html", data);
+          alert("Adding reservation...");
+        });
+      });
+        </script>
 </body>
 
 </html>
