@@ -18,10 +18,10 @@ let ttr = [];
 // If party size is greater than 5, subtract 2 tables.
 
 function reserveSeating() {
-    //if reserving *Check if tables are available.
-    //if available *reserve table for that time.
-    //if unavailable then push last name to waiting list cue(wlc).
-    //inside of wlc present user with *Estimated wait time and postion in line.
+  //if reserving *Check if tables are available.
+  //if available *reserve table for that time.
+  //if unavailable then push last name to waiting list cue(wlc).
+  //inside of wlc present user with *Estimated wait time and postion in line.
   //if tables reserved is less than or equal to whats available then we will allow the reservation
   if (tsr <= tsa - 4) {
     //add 1 to seats reserved
